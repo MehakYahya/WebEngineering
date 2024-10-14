@@ -1,0 +1,20 @@
+
+
+<main class="main">
+  <div class="content">
+    <hello name="{{ name }}"></hello>
+
+<input value="text" [(ngModel)]="input" placeholder="Enter your name" required minlength="3" /><br>
+<input type="number" [(ngModel)]="age" placeholder="Enter your age" required pattern="[0-9]"> <br>
+<input type="email" [(ngModel)]="email" placeholder="Enter your email" required email ><br>
+<label for="course">Select a course:</label><br>
+<select [(ngModel)]="course" class="courses" placeholder="Select a course" required >
+  <option value="" disabled selected>Select a course</option>
+  <option *ngFor="let courseOption of courseOptions" [value]="courseOption">{{ courseOption }}</option>
+</select>
+
+<br>
+<button type="submit" (click)="myFunction()" >Submit</button>
+
+  </div>
+  </main>
